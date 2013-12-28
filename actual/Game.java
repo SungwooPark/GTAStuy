@@ -26,10 +26,28 @@ public class Game{
         if (choice == 1){
             System.out.println("Going to your locker on 4th floor ... ");
             player.setFloor(4);
+            System.out.println("You encountered your friend!");
+            friends(0);
         }else if (choice == 2){
             System.out.println("Going to homeroom on 2nd floor... ");
         }else{
-            player.status();
+            System.out.println(player.status());
+        }
+    }
+    
+    public void friends(int i){
+        if (i == 0){
+            String prompt = "Hey, " + name + ". If you are going to your locker, can you ";
+            prompt = prompt + "stop by my locker and get my tweezers";
+            System.out.println(prompt);
+            System.out.println("1. Say yes 2. Say no");
+            int a = scan.nextInt();
+            if (a==1){
+                System.out.println("You got [Your friend's locker combination]");
+            }else{
+                System.out.println("Your friend threatened you. Now you have no choice");
+                System.out.println("You got [Your friend's locker combination]");
+            }
         }
     }
 }

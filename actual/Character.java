@@ -2,14 +2,15 @@ import java.util.*;
 import java.io.*;
 
 public class Character {
-	private int health,floor,location;
+	private int health,floor;
+        private String location;
         private String name;
 
 	public Character (String name){
 		health = 50;
 		this.name = name;
 		floor = 2;
-		location = 0;
+		location = "hallway";
 	}
 		
 
@@ -34,7 +35,7 @@ public class Character {
 		System.out.println("You are now on floor: " + floor);
 	}
 	
-	public void setLocation (int arg) {
+	public void setLocation (String arg) {
 		location = arg;
 		System.out.println("You are now at location: " + location);
 	}
