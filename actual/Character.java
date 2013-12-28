@@ -2,12 +2,14 @@ import java.util.*;
 import java.io.*;
 
 public class Character {
-	private int health;
+	private int health,floor,location;
         private String name;
 
 	public Character (String name){
 		health = 50;
 		this.name = name;
+		floor = 2;
+		location = 0;
 	}
 		
 
@@ -19,4 +21,22 @@ public class Character {
                 intro = intro + "          || Welcome to GTAstuy ||";
 		return intro;
 	}
+
+	public String status () {
+		String status = "Health: " + this.health;
+		status = status + "\n" + "You are on floor: " + this.floor;
+		status = status + "\n" + "You are at location: " + this.location;
+		return status;
+	}
+
+	public void setFloor (int arg) {
+		floor = arg;
+		System.out.println("You are now on floor: " + floor);
+	}
+	
+	public void setLocation (int arg) {
+		location = arg;
+		System.out.println("You are now at location: " + location);
+	}
+
 }
