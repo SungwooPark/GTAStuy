@@ -4,6 +4,7 @@ import java.io.*;
 public class Game{
     private Scanner scan;
     private String name;
+    private Character player;
 
     public Game(){
         scan = new Scanner(System.in);
@@ -12,6 +13,8 @@ public class Game{
 
         System.out.println("What is your name?: ");
         name = scan.nextLine();
-        System.out.println(name);
+
+        player = new Character(name);
+        System.out.println(player.intro());
     }
 }
