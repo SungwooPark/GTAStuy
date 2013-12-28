@@ -5,6 +5,7 @@ public class Character {
 	private int health,floor;
         private String location;
         private String name;
+        private Items item;
 
 	public Character (String name){
 		health = 50;
@@ -40,4 +41,11 @@ public class Character {
 		System.out.println("You are now at location: " + location);
 	}
 
+        public void addItem(String itemName){
+            item.expandList(itemName);
+        }
+        
+        public String printItemList(){
+            return item.itemList();
+        }
 }
