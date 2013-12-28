@@ -24,9 +24,12 @@ public class Game{
         int choice = 0;
         choice = scan.nextInt();
         if (choice == 1){
-            System.out.println("Going to locker ... ");
+            System.out.println("Going to your locker on 4th floor ... ");
+            player.setFloor(4);
+        }else if (choice == 2){
+            System.out.println("Going to homeroom on 2nd floor... ");
         }else{
-            System.out.println("Going to homeroom ... ");
+            player.status();
         }
     }
 }
